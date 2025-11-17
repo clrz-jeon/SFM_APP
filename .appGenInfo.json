@@ -1,0 +1,29 @@
+{
+  "generationParameters": {
+    "generationDate": "Fri Nov 14 2025 05:48:13 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "SAP System (ABAP Cloud)",
+    "metadataFilename": "",
+    "serviceUrl": "https://3ded81b5-3f07-48a6-92ef-d6cfc17edd60.abap.eu10.hana.ondemand.com/sap/opu/odata4/sap/zui_setup_rules_o4/srvd/sap/zui_setup_rules_o4/0001/",
+    "appName": "project1",
+    "appTitle": "App Title",
+    "appDescription": "An SAP Fiori application.",
+    "appNamespace": "sfm_app",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.136.8",
+    "enableCodeAssist": false,
+    "enableEslint": false,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.19.5",
+    "template": "List Report Page V4",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "ZC_SETUP_RULES000"
+      }
+    ],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}

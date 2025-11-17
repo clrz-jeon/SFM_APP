@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "3.1"
+metadata:
+  name: sfmapp.project1
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: ZSAP_BAS
+          url: https://3ded81b5-3f07-48a6-92ef-d6cfc17edd60.abap.eu10.hana.ondemand.com
+          scp: true
+        app:
+          name: SFM_SETUP_RULE
+          package: ZITEM_FOOTPRINTS
+          transport: H01K900004
+        exclude:
+          - /test/
