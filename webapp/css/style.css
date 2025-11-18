@@ -1,0 +1,38 @@
+/* Enter your custom styles here */
+
+.select .sapMSltLabel  {
+    font-style: italic !important;
+    color: #666;   
+}
+
+.label {
+    font-weight: bold;
+    color:black
+}
+
+.create {
+    padding-left: 15px;
+    
+}
+
+.table {
+    padding-top: 25px;
+}
+
+.bold {
+    font-weight: bold;
+    /* color: black !important; */
+}
+
+.label {
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+}
+
+.GenInfo {
+    padding-left: 10rem;
+}
+
+.dialog {
+    padding-left: 1.5rem;
+}

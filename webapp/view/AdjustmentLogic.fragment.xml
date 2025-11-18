@@ -1,0 +1,43 @@
+<core:FragmentDefinition
+xmlns:core="sap.ui.core"
+xmlns="sap.m"
+xmlns:l="sap.ui.layout.form"
+>
+<WizardStep id="StepAdjLogic" title="Adjustment Logic" >
+  <VBox id="_IDGenVBox" class="sapUiSmallMargin" >
+  <Text id="_IDGenText30" text="Define adjustment logic to filtered item records. " />
+  </VBox>
+
+  <Toolbar id="_IDGenToolbar5">
+    <ToolbarSpacer id="_IDGenToolbarSpacer6"/>
+    <Button id="_IDGenButton16" text="Add" type="Emphasized" press="onAddAdjLogic" />
+    <Button id="_IDGenButton10" text="Edit" type="Emphasized" press="onEditAdjLogic" />
+    <Button id="_IDGenButton11" text="Delete" type="Emphasized" press="onDeleteAdjLogic" />
+    <Button id="_IDGenButton12" text="Save rule" type="Emphasized" press="onSaveAndNext" />
+ </Toolbar>
+    <Table id="tblAdjLogic" 
+           mode="MultiSelect"
+           width="100%"
+           inset="false"
+           items="{path:'/adjLogic'}">
+
+       <columns>
+          <Column id="_IDGenColumn" ><Text id="_IDGenText31" text="Logic" /></Column>
+          <Column id="_IDGenColumn13" ><Text id="_IDGenText32" text="Value" /></Column>
+          <Column id="_IDGenColumn14" ><Text id="_IDGenText33" text="Value UoM" /></Column>
+       </columns>    
+
+       <items>
+         <ColumnListItem id="_IDGenColumnListItem1" >
+           <cells>
+             <Text id="_IDGenText40" text="{Logic}" />
+             <Text id="_IDGenText41"  text="{Value}" />
+             <Text id="_IDGenText42"  text="{UoM}" />
+           </cells>
+         </ColumnListItem>
+       </items>
+    </Table>
+
+ 
+</WizardStep>
+</core:FragmentDefinition>

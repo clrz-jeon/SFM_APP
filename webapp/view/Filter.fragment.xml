@@ -1,0 +1,56 @@
+<core:FragmentDefinition
+xmlns:core="sap.ui.core"
+xmlns="sap.m"
+xmlns:l="sap.ui.layout.form"
+>
+
+<WizardStep id="StepFilters" title="Filters" >
+
+<Toolbar id="_IDGenToolbar3" class="sapUiSmallMarginBottom" >
+   <Text id="_IDGenText18" text="Filter item records in SFM where adjustment needs to be applied" />
+   <ToolbarSpacer id="_IDGenToolbarSpacer4" />
+   <Button id="_IDGenButton6" text="Add" type="Emphasized" press="onAddFilter" />
+   <Button id="_IDGenButton7" text="Edit" type="Emphasized" press="onEditFilter" />
+   <Button id="_IDGenButton8" text="Delete" type="Emphasized" press="onDeleteFilter" />
+   <Button id="_IDGenButton9" text="Save and Next" type="Emphasized" press="onSaveAndNext" />  
+</Toolbar>
+
+<Table id="tblFilters"
+       mode="MultiSelect"
+       inset="false"
+       width="100%" 
+       items="{path:'/filters'}">
+
+   <columns>
+     <Column id="_IDGenColumn9" ><Text id="_IDGenText19" text="Characteristic" /></Column>
+     <Column id="_IDGenColumn10" ><Text id="_IDGenText20" text="Operator" /></Column>
+     <Column id="_IDGenColumn11" ><Text id="_IDGenText21" text="Value" /></Column>
+     <Column id="_IDGenColumn12" ><Text id="_IDGenText22" text="Value UoM" /></Column>
+   </columns>    
+
+   <items>
+    <ColumnListItem id="_IDGenColumnListItem2" >
+     <cells>
+      <Text id="_IDGenText23" text="{Characteristics}" />
+      <Text id="_IDGenText24" text="{Operator}" />
+      <Text id="_IDGenText25" text="{Value}" />
+      <Text id="_IDGenText26" text="{UoM}" />
+
+     </cells>
+    </ColumnListItem>
+   </items>
+    
+</Table>
+
+<HBox id="_IDGenHBox1" alignItems="Center" class="sapUiSmallMarginTop">
+  <Text id="_IDGenText27" text="Matching condition across characteristics" />
+  <Select id="_IDGenSelect1" width="6.5rem" class="sapUiTinyMarginBegin "   >
+       <core:Item id="_IDGenItem14" key="AND" text="AND" />
+       <core:Item id="_IDGenItem13" key="OR" text="OR"  />
+  </Select>
+
+</HBox>
+
+</WizardStep>
+
+</core:FragmentDefinition>

@@ -1,0 +1,41 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout.form">
+
+  <WizardStep id="StepScope" title="Scope">
+    <Toolbar id="_IDGenToolbar1">
+      <Text id="_IDGenText9" text="Define plants for which the product footprints should be averaged" />
+      <ToolbarSpacer id="_IDGenToolbarSpacer3" />
+      <Button id="_IDGenButton5" text="Save and next" type="Emphasized" press="onSaveAndNext"/>
+    </Toolbar>    
+
+    <l:SimpleForm id="_IDGenSimpleForm1"
+                  editable="true"
+                  layout="ResponsiveGridLayout"
+                  labelSpanL="4" labelSpanM="4"
+                  emptySpanL="1" emptySpanM="1"
+                  columnsL="1" columnsM="1">
+
+      <Label id="_IDGenLabel6" text="Inventory scope" required="true" class="label" />
+      <HBox id="_IDGenHBox8">
+        <Select id="_IDGenSelect" width="400px" class="select">
+          <core:Item id="_IDGenItem8" key="" text="Select 1" />
+        </Select>
+        <Button id="editIconScope" icon="sap-icon://edit" type="Transparent" visible="false" />
+      </HBox>
+
+      <Label id="_IDGenLabel7" text="Plants" required="true" class="label" />
+      <HBox id="_IDGenHBox9">
+        <MultiComboBox id="_IDGenMultiComboBox" width="400px" placeholder="Select one/multiple/All plants">
+          <core:Item id="_IDGenItem9" key="*" text="All plants" />
+          <core:Item id="_IDGenItem10" key="P1" text="Plant 1" />
+          <core:Item id="_IDGenItem11" key="P2" text="Plant 2" />
+          <core:Item id="_IDGenItem12" key="P3" text="Plant 3" />
+        </MultiComboBox>
+        <Button id="editIconPlants" icon="sap-icon://edit" type="Transparent" visible="false" />
+      </HBox>
+
+    </l:SimpleForm>
+  </WizardStep>
+</core:FragmentDefinition>

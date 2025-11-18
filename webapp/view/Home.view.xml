@@ -1,0 +1,93 @@
+<mvc:View controllerName="sfmpcf.mainapp.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:tnt="sap.tnt"
+    >
+
+    <tnt:ToolHeader id="shellLikeToolHeader">
+                        <Image id="_IDGenImage" 
+                            src="test-resources/sap/tnt/images/SAP_Logo.png"
+                            decorative="false" 
+                            press="onLogoPressed" 
+                            tooltip="SAP Logo" 
+                            class="logo"/>
+                        <Title text="Set up and manage rules" wrapping="false" 
+                            id="productName" class="HeaderText bold"/>
+                    </tnt:ToolHeader>
+    <NavContainer id="_IDGenNavContainer">
+      <Page id="pageSummary" showHeader="false">
+        <VBox id="_IDGenVBox2" class="sapUiSmallMargin">
+
+           <Toolbar id="_IDGenToolbar2"  >
+              <Title id="_IDGenTitle" text="Rules Summary" />
+              <ToolbarSpacer id="_IDGenToolbarSpacer2" />
+
+               <SearchField id="_IDGenSearchField" width= "300px"
+                            placeholder="Search rules"
+                            liveChange="onSearch" />
+
+              <ToolbarSpacer id="_IDGenToolbarSpacer" />
+
+              <Button id="_IDGenButton1" text="Create new rule"
+                      type="Emphasized"
+                      press="onCreateNewRule"/>
+
+              <Button id="_IDGenButton2" text="Edit selected rule"
+                      type="Emphasized"
+                      press="onEditRule"/>  
+
+              <Button id="_IDGenButton3" text="Delete selected rule"
+                      type="Emphasized"
+                      press="onDeleteRule"
+              />                 
+           </Toolbar>
+
+           <Table id="_IDGenTable"
+                  mode="MultiSelect"
+                  width="100%"
+                  class="table"
+                  items="{/rules}"
+                   >
+              <columns>
+                 <Column id="_IDGenColumn1" width="4rem"><Text id="_IDGenText" text="ID" /></Column>
+                 <Column id="_IDGenColumn2" minScreenWidth="Tablet"><Text id="_IDGenText2" text="Name"/></Column>
+                 <Column id="_IDGenColumn3" minScreenWidth="Tablet"><Text id="_IDGenText3" text="Description"/></Column>
+                 <Column id="_IDGenColumn4" width="7rem"><Text id="_IDGenText4" text="Valid from"/></Column>
+                 <Column id="_IDGenColumn5" width="7rem"><Text id="_IDGenText5" text="Valid to"/></Column>
+                 <Column id="_IDGenColumn6" width="6rem"><Text id="_IDGenText6" text="Item type"/></Column>
+                 <Column id="_IDGenColumn7" minScreenWidth="Tablet"><Text id="_IDGenText7" text="Type of rule"/></Column>
+                 <Column id="_IDGenColumn8" minScreenWidth="Tablet"><Text id="_IDGenText8" text="Plants"/></Column>
+              </columns>    
+
+              <items>
+                  <ColumnListItem id="_IDGenColumnListItem" >
+                     <cells>
+                        <Text id="_IDGenText10" text="{ID}" />
+                        <Text id="_IDGenText11" text="{Name}​" />
+                        <Text id="_IDGenText12" text="{Description}​" />
+                        <Text id="_IDGenText13" text="{ValidFrom}" />
+                        <Text id="_IDGenText14" text="{ValidTo}" />
+                        <Text id="_IDGenText15" text="{ItemType}" />
+                        <Text id="_IDGenText16" text="{RuleType}" />
+                        <Text id="_IDGenText17" text="{Plants}" />
+                     </cells>
+                  </ColumnListItem>
+              </items>    
+           </Table>
+        </VBox>
+      </Page>
+
+        <Page id="pageGenInfo" showHeader="false" >
+         <core:Fragment
+         fragmentName="sfmpcf.mainapp.view.GenInfo"
+         type="XML"
+      />
+      </Page>  
+
+      
+    </NavContainer>
+    
+    
+</mvc:View>

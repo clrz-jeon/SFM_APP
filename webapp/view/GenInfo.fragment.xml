@@ -1,0 +1,64 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout.form">
+  <VBox id="idGenVBox" class="sapUiSmallMargin">
+    <Wizard id="idGenWizard" showNextButton="false" renderMode="Page">
+      <WizardStep id="idGenStepGeneral" title="{i18n>GENINFO_STEP_TITLE}">
+        <Toolbar id="idGenToolbar">
+          <Text id="idGenCreateText" text="{i18n>GENINFO_CREATE_TEXT}" class="create"/>
+          <ToolbarSpacer id="idGenToolbarSpacer"/>
+          <Button id="idGenSaveNextBtn" text="{i18n>GENINFO_SAVE_NEXT_BTN}" type="Emphasized" press="onSaveAndNext"/>
+        </Toolbar>
+
+        <l:SimpleForm id="idGenSimpleForm" editable="true" class="GenInfo" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" emptySpanL="1" emptySpanM="1" columnsL="1" columnsM="1">
+          <!-- Name -->
+          <Label id="idGenNameLabel" text="{i18n>GENINFO_NAME_LBL}" required="true" class="label"/>
+          <HBox id="idGenNameHBox">
+            <Input id="idGenNameInput" placeholder="{i18n>GENINFO_NAME_PH}" maxLength="30" width="500px"/>
+            <Button id="idGenNameEditBtn" icon="sap-icon://edit" type="Transparent" visible="false"/>
+          </HBox>
+
+          <!-- Description -->
+          <Label id="idGenDescLabel" text="{i18n>GENINFO_DESC_LBL}" required="true" class="label"/>
+          <HBox id="idGenDescHBox">
+            <Input id="idGenDescInput" placeholder="{i18n>GENINFO_DESC_PH}" width="500px"/>
+            <Button id="idGenDescEditBtn" icon="sap-icon://edit" type="Transparent" visible="false"/>
+          </HBox>
+
+          <!-- Valid From -->
+          <Label id="idGenValidFromLabel" text="{i18n>GENINFO_VALID_FROM_LBL}" required="true" class="label"/>
+          <HBox id="idGenValidFromHBox">
+            <DatePicker id="idGenValidFromDP" displayFormat="yyyy-MM-dd" placeholder="{i18n>GENINFO_DATE_PH}" width="500px"/>
+            <Button id="idGenValidFromEditBtn" icon="sap-icon://edit" type="Transparent" visible="false"/>
+          </HBox>
+
+          <!-- Valid To -->
+          <Label id="idGenValidToLabel" text="{i18n>GENINFO_VALID_TO_LBL}" required="true" class="label"/>
+          <HBox id="idGenValidToHBox">
+            <DatePicker id="idGenValidToDP" displayFormat="yyyy-MM-dd" placeholder="{i18n>GENINFO_DATE_PH}" width="500px"/>
+            <Button id="idGenValidToEditBtn" icon="sap-icon://edit" type="Transparent" visible="false"/>
+          </HBox>
+
+          <!-- Item type -->
+          <Label id="idGenItemTypeLabel" text="{i18n>GENINFO_ITEMTYPE_LBL}" required="true" class="label"/>
+          <MultiComboBox id="idGenItemTypeMCB" width="500px" placeholder="{i18n>GENINFO_ITEMTYPE_PH}">
+            <core:Item id="idGenItemTypePRO" key="PRO" text="{i18n>GENINFO_ITEMTYPE_PRO}"/>
+            <core:Item id="idGenItemTypeREC" key="REC" text="{i18n>GENINFO_ITEMTYPE_REC}"/>
+            <core:Item id="idGenItemTypeSUP" key="SUP" text="{i18n>GENINFO_ITEMTYPE_SUP}"/>
+            <core:Item id="idGenItemTypeES"  key="ES"  text="{i18n>GENINFO_ITEMTYPE_ES}"/>
+          </MultiComboBox>
+
+          <!-- Type of rule -->
+          <Label id="idGenRuleTypeLabel" text="{i18n>GENINFO_RULETYPE_LBL}" required="true" class="label"/>
+          <MultiComboBox id="idGenRuleTypeMCB" width="500px" placeholder="{i18n>GENINFO_RULETYPE_PH}">
+            <core:Item id="idGenRuleTypeAV" key="AV" text="{i18n>GENINFO_RULETYPE_AV}"/>
+            <core:Item id="idGenRuleTypeIN" key="IN" text="{i18n>GENINFO_RULETYPE_IN}"/>
+          </MultiComboBox>
+
+        </l:SimpleForm>
+      </WizardStep>
+
+      <core:Fragment fragmentName="sfmpcf.mainapp.view.Scope" type="XML"/>
+      <core:Fragment fragmentName="sfmpcf.mainapp.view.Filter" type="XML"/>
+      <core:Fragment fragmentName="sfmpcf.mainapp.view.AdjustmentLogic" type="XML"/>
+    </Wizard>
+  </VBox>
+</core:FragmentDefinition>

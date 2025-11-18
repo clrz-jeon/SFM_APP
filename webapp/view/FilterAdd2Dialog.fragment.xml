@@ -1,0 +1,82 @@
+<core:FragmentDefinition
+      xmlns="sap.m"
+      xmlns:core="sap.ui.core">
+
+  <Dialog id="dlgAddFilter2"
+          title="Define filter characteristics"
+          draggable="true"
+          resizable="true"
+          contentWidth="45rem"
+          contentHeight="auto"
+          afterClose="onFilterDialogClose2"
+          >
+
+    <VBox id="_IDGenVBox7" >
+      <Table
+          id="tblAdd2"
+          inset="false"
+          width="100%"
+          showSeparators="None">
+        <columns>
+          <Column id="_IDGenColumn19" ><Text id="_IDGenText37" text="Characteristic"/></Column>
+          <Column id="_IDGenColumn20" ><Text id="_IDGenText38"  text="Operator"/></Column>
+          <Column id="_IDGenColumn21" ><Text id="_IDGenText39"  text="Values"/></Column>
+          <Column id="_IDGenColumn22" ><Text id="_IDGenText43" text="Value UoM"/></Column>
+        </columns>
+        <items>
+          <ColumnListItem id="_IDGenColumnListItem4" >
+            <cells>
+              <Select id="selCharacteristic2" class="select"
+                      selectedKey=""        
+                      width="100%"
+                      change=".onCharacteristicChange2">
+                <core:Item id="_IDGenItem29"  key="" text="Select characteristic to apply" />
+                <core:Item id="_IDGenItem30"  key="Product" text="Product"/>
+                <core:Item id="_IDGenItem32"  key="ProductGroup" text="Product group"/>
+                <core:Item id="_IDGenItem38"   key="FootprintValue" text="Footprint value"/>
+                <core:Item id="_IDGenItem39"   key="FootprintType" text="Footprint type"/>
+              </Select>
+
+              <Select id="selOperator2" class="select"
+                      selectedKey=""
+                      width="100%">
+                <core:Item id="_IDGenItem33"  key="" text="Select operator"/>
+                <core:Item id="_IDGenItem34"  key="EQ" text="Equal to"/>
+                <core:Item id="_IDGenItem23" key="NE" text="Not Equal to" />
+                <core:Item id="_IDGenItem41" key="NE" text="Less than" />
+                <core:Item id="_IDGenItem42" key="NE" text="Greater than" /> 
+              </Select>
+
+              <Select id= "inpValue2" class="select"
+                      selectedKey=""
+                      width="100%" >
+                <core:Item id="_IDGenItem35"  key="" text="Select 1" />
+                <core:Item id="_IDGenItem36"  key="VAL" text="All" />    
+              </Select>
+
+
+              <Select id="selUoM2" 
+                      selectedKey=""
+                      width="100%">
+                <core:Item id="_IDGenItem37"  key="NA" text="Not applicable"/>
+                <core:Item id="_IDGenItem40" key="KG" text="KgCO2e" />
+                <core:Item id="_IDGenItem43" key="KGP" text ="KgCo2 per Kg" />
+              </Select>
+            </cells>
+          </ColumnListItem>
+        </items>
+      </Table>
+    </VBox>
+
+    <endButton>
+      <Button id="_IDGenButton18"  text="Cancel" type="Transparent"
+              press="onCancelAddFilter2"/>
+    </endButton>
+
+    <beginButton>
+      <Button id="_IDGenButton19"  text="Add" type="Emphasized"
+              press="onConfirmAddFilter2"/>
+    </beginButton>
+
+  </Dialog>
+</core:FragmentDefinition>

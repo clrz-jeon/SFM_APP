@@ -1,0 +1,49 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:layout="sap.ui.layout.form">
+    <Dialog id="dlgAddAdjLogic2"
+        title="Define adjustment logic"
+        draggable="true"
+        resizable="true"
+        contentWidth="700px"
+        contentHeight="auto"
+        afterClose="onCancelAddAdjLogic2">
+
+        <HBox id="_IDGenHBox3"  class="sapUiSmallMargin" justifyContent="SpaceBetween">
+            <VBox id="_IDGenVBox8"  width="32%">
+                <Label id="_IDGenLabel11" text="Logic" labelFor="selLogic"/>
+                <Select id="selLogic2" width="100%">
+                    <items>
+                        <core:Item id="_IDGenItem44" key="AD" text="Add" />
+                        <core:Item id="_IDGenItem45" key="SUB" text="Subtract" />
+                    </items>
+                </Select>
+            </VBox>
+
+            <VBox id="_IDGenVBox9"  width="32%">
+                <Label id="_IDGenLabel12"  text="Value" labelFor="selLogicValue"/>
+                <Input id="InpVal"  width="150px"/>
+
+            </VBox>
+
+            <VBox id="_IDGenVBox10"  width="32%">
+                <Label id="_IDGenLabel13"  text="Value UoM" labelFor="selLogicUoM"/>
+                <Select id="selLogicUoM2" width="100%">
+                    <items>
+                        <core:Item id="_IDGenItem46" key="KC" text="KgCO2e" />
+                        <core:Item id="_IDGenItem47"  key="KCK" text="KgCO2e per Kg" />
+                         <core:Item id="_IDGenItem48"  key="PE" text="Percentage" />
+                    </items>
+                </Select>
+            </VBox>
+        </HBox>
+
+        <beginButton>
+            <Button id="_IDGenButton17"  text="Add" press="onConfirmAddAdjLogic2"/>
+        </beginButton>
+        <endButton>
+            <Button id="_IDGenButton20"  text="Cancel" press="onCancelAddAdjLogic2"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

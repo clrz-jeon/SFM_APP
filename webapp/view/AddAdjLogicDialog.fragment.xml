@@ -1,0 +1,52 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:layout="sap.ui.layout.form">
+    <Dialog id="dlgAddAdjLogic"
+        title="Define adjustment logic"
+        draggable="true"
+        resizable="true"
+        contentWidth="700px"
+        contentHeight="auto"
+        afterClose="onCancelAddAdjLogic">
+
+        <HBox id="_IDGenHBox" class="sapUiSmallMargin" justifyContent="SpaceBetween">
+            <VBox id="_IDGenVBox3" width="32%">
+                <Label id="_IDGenLabel8" text="Logic" labelFor="selLogic"/>
+                <Select id="selLogic" width="100%">
+                    <items>
+                        <core:Item id="_IDGenItem18" key="ROLLAVG" text="Rolling average" />
+                    </items>
+                </Select>
+            </VBox>
+
+            <VBox id="_IDGenVBox4" width="32%">
+                <Label id="_IDGenLabel9" text="Value" labelFor="selLogicValue"/>
+                <Select id="selLogicValue" width="100%">
+                    <items>
+                        <core:Item id="_IDGenItem17" key="" text="Select 1" />
+                        <core:Item id="_IDGenItem19" key="3" text="Last 3 months" />
+                        <core:Item id="_IDGenItem20" key="6" text="Last 6 months" />
+                        <core:Item id="_IDGenItem21" key="12" text="Last 12 months" />
+                    </items>
+                </Select>
+            </VBox>
+
+            <VBox id="_IDGenVBox6" width="32%">
+                <Label id="_IDGenLabel10" text="Value UoM" labelFor="selLogicUoM"/>
+                <Select id="selLogicUoM" width="100%">
+                    <items>
+                        <core:Item id="_IDGenItem22" key="NA" text="Not applicable" />
+                    </items>
+                </Select>
+            </VBox>
+        </HBox>
+
+        <beginButton>
+            <Button id="_IDGenButton4" text="Add" press="onConfirmAddAdjLogic"/>
+        </beginButton>
+        <endButton>
+            <Button id="_IDGenButton15" text="Cancel" press="onCancelAddAdjLogic"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>
